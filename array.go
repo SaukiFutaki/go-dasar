@@ -16,10 +16,19 @@ func main() {
 
 	//jika sudah diisi, maka tidak bisa diisi lagi
 	//jika ada yg tidak diisi, maka akan diisi dengan nilai default yaitu 0
-	var angka = [3]int{
+
+	//jika ingin menggunakan array tanpa menentukan jumlah index, maka bisa menggunakan [...]tipeData
+	var angka = [...]int{
 		90,
 		95,
 		100,
+		85,
+		80,
 	}
+	fmt.Println(angka)
+	fmt.Println(len(angka))
+
+	//mengganti nilai array index 0 yang awalnya 90 menjadi 100
+	angka[0] = 100
 	fmt.Println(angka)
 }
